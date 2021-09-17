@@ -1,0 +1,27 @@
+<br>
+<h5>PERSON LIST</h5>
+<div class="container">
+<div class="container-table">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Place</th>
+        <th scope="col">State</th>
+        <th scope="col">Pin</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of persons">
+          <td>{{p.name}}</td>
+          <td>{{p.place}}</td>
+          <td>{{p.state}}</td>
+          <td>{{p.pin}}</td>
+          <td><button class="btn btn-dark" routerLink="update/{{p._id}}">Edit</button></td>
+          <td><button class="btn btn-dark" (click)="delete(p._id)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
